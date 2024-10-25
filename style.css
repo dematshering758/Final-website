@@ -1,0 +1,487 @@
+
+/* for h tag */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Arapey:ital@0;1&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* for p tag */
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+
+}
+::-webkit-scrollbar{
+  display: none;
+}
+body{
+  overflow-x: hidden;
+  /* button color */
+  --color1: #F9D57D;      
+ --background-color2: #212832;
+ --color2: #162548;
+ --color3: #7BAED4;
+
+}
+/* nav bar */
+#logo{
+  width: 70px;
+  height: 60px;
+  position: relative;
+  /* bottom: 5px; */
+
+}
+.navbar{
+background-color: var(--color2);
+height: 80px;
+width: 100%;
+
+}
+#aa{
+  color: var(--color1);
+  font-size: 20px;
+}
+#toggler{
+  background-color: #fff;
+  position: relative;
+  right: 7px;
+}
+.navbar-toggler{
+  border: none;
+  font-size: 1.25rem;
+  text-align: center;
+ 
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+  box-shadow: none;
+  outline: none;
+}
+.nav-link{
+  color: white;
+  position: relative;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.nav-link:hover, .nav-link.active{
+color: #000;
+
+}
+
+.nav-link::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--background-color2);
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  
+}
+.nav-link:hover::before{
+  width: 100%;
+  visibility:visible;
+  background-color: orange;
+}
+
+
+/* end nav bar */
+/* hero section */
+.hero-section{
+  background: url("photo_2024-10-23_08-43-23.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.hero-section::before{
+  background-color: rgba(0,0,0,0.6);
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.hero-section .container{
+  position: relative;
+  top:100px;
+  color: whitesmoke;
+}
+
+
+#tashi{
+  color: #FBBA45;
+}
+marquee{
+  font-size: 30px;
+  font-family: "Arapey", serif;
+ }
+#style{
+  font-size: 60px;
+    position: relative;
+    font-weight: 900;
+    left: 120px;
+    top: 200px;
+    display: inline-block;
+    white-space: nowrap; /* Prevents text from wrapping to next line */
+    overflow: hidden; /* Hides the word before it is "typed" */
+    animation: typing 5s steps(100) infinite; /* Typing effect for a 6-letter word */
+    font-family: "Anton SC", sans-serif;
+   
+}
+/* Typing effect */
+@keyframes typing {
+  from {
+      width: 0; /* Starts with no letters visible */
+  }
+  to {
+      width: 31ch; /* Reveals 6 characters (adjust according to word length) */
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  from, to {
+      border-color: transparent;
+  }
+  100% {
+      border-color: black;
+  }
+}
+
+
+
+
+/* customer */
+.feedback-section {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  justify-content: space-around; /* Space between items */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap */
+  margin: 20px; /* Margin around the section */
+  font-family: "Arapey", serif;
+ 
+}
+
+.customer-feedback {
+  flex: 1 1 200px; /* Flexible base width */
+  margin: 10px; /* Margin around each feedback item */
+  text-align: center; /* Center text */
+}
+
+.customer-feedback img {
+  width: 100px; /* Set image width */
+  height: 100px; /* Set image height */
+  border-radius: 50%; /* Circular images */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 640px) {
+  .feedback-section {
+      flex-direction: column; /* Change to vertical layout */
+      align-items: center; /* Center items horizontally */
+  }
+
+  .customer-feedback {
+      flex: 1 1 100%; /* Make each feedback item full width */
+      margin: 10px 0; /* Vertical margin for spacing */
+  }
+
+  .customer-feedback img {
+      width: 100%;
+      height: 80px; 
+  }
+}
+
+
+/* end customer */
+
+
+
+/* CSS code for the flip card menu */
+
+.heading1{
+  text-align: center;
+  padding: 30px;
+
+}
+.flip-card-front img{
+  width: 300px;
+  height: 300px;
+ border-radius: 20px;
+}
+
+ .menu-container {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center; 
+} 
+
+.row {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin-bottom: 20px; 
+} 
+
+.flip-card {
+   background-color: transparent; 
+    width: 300px;  
+  height: 300px;
+   margin: 60px; 
+  perspective: 1000px;
+}
+ 
+.flip-card-inner {
+  position: relative;
+ width: 100%; 
+ height: 100%; 
+ text-align: center; 
+  transition: transform 0.8s; 
+  transform-style: preserve-3d; 
+} 
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+ 
+ .flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+} 
+
+ .flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 20px;
+}
+ 
+ .flip-card-back {
+  background-color: gray;
+  color: white;
+  padding: 20px;
+  transform: rotateY(180deg);
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: var(--background-color2);
+} 
+ .flip-card-back p {
+ position: relative;
+  top: 50px;
+
+} 
+/* flip card end */
+#buttonBg{
+  border: 1px solid white;
+}
+#buttonBg:hover{
+  background-color: var(--background-color2);
+}
+
+
+/* footer */
+.footer-info{
+  /* width: auto; */
+  display: flex;
+  padding: 30px;
+background-color: var(--color2);
+ height: 390px;
+  }
+ .footer-info a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Arapey", serif;
+ }
+ .footer-info ul,li{
+  list-style-type: none;
+}
+.about img{
+  width: 140px;
+  position: relative;
+  bottom: 20px;
+  height: 110px;
+}
+.footer-info h6{
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.about{
+  width: 400px;
+ }
+ .about p{
+  font-size: 20px;
+ position: relative;
+ bottom: 5px;
+ color: #fff;
+ font-family: "Arapey", serif;
+
+ }
+.link{
+  margin-left: 120px;
+  color: var(--color1);
+font-size: 30px;
+
+}
+.link ul li{
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--color2);
+}
+
+.link ul li a:hover{
+  text-decoration: underline;
+}
+.social-media{
+  margin-top: 30px;
+}
+.social-media ul{
+  display: flex;
+}
+.social-media ul li a{
+  display: inline-block;
+  margin-right: 50px;
+  padding-top:  12px;
+  background-color: transparent;
+  text-align: center;
+  color: var(--color1);
+  position: relative;
+  bottom: 30px;
+  font-size: 40px;
+}
+.social-media ul li a:hover{
+color: var(--color1);
+}
+.copyright{
+  text-align: center;
+  background-color: antiquewhite;
+}
+.heading1 p{
+  font-size: 20px;
+  font-family: "Arapey", serif;
+}
+.heading1 h1{
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--color2);
+  font-family: "Anton SC", sans-serif;
+ 
+}
+.about-us-heading h2{
+  text-align: center;
+  font-family: "Anton SC", sans-serif;
+  color: var(--color2);
+}
+
+/* Responsive design for max-width: 450px */
+@media (max-width: 640px) {
+  .feedback-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feedback-card {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+/* Responsive Styles */
+@media (max-width:640px) {
+.footer-info {
+    flex-direction: column; /* Stack items vertically */
+      padding: 0;
+      /* background-color: var(--background-color); */
+      height: 100%;
+}
+.about{
+  width: 290px;
+  padding: 10px;
+ }
+
+#input1{
+  position: relative;
+  right: 10px;
+  width: 180px;
+  bottom: 10px;
+  height: 40px;
+}
+#logo{
+  width: 40px;
+  height: 50px;
+ 
+  position: relative;
+  bottom: 5px;
+}
+.navbar-toggler{
+position: relative;
+bottom: 2px;
+color: #fff;
+}
+
+.link{
+ margin: 0;
+ padding: 10px;
+}
+.about img{
+  width: 80px;
+  position: relative;
+  bottom: 10px;
+  height: 80px;
+}
+
+
+marquee{
+  font-size: 10px;
+ }
+
+
+#style {
+  font-size: 20px;
+  left: 8px;
+  top: 20px;
+  /* white-space:wrap; */
+}
+
+.flip-card-front img{
+  width: 100%;
+  height: 250px;
+ border-radius: 20px;
+}
+.flip-card {
+  background-color: transparent; 
+   width: 100%;  
+ height: 250px;
+ margin: 0;
+ padding: 20px;
+
+}
+.flip-card-back {
+  width: 100%;
+  height: 250px;
+}
+#buttonBg{
+  width: 40px;
+  
+}
+
+
+}
+/* chatbot */
+
+
+
+
+
+
